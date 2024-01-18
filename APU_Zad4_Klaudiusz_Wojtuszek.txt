@@ -1,0 +1,78 @@
+PS C:\Users\Asrock\Desktop\Studia\APU\LAB4> & C:/Users/Asrock/AppData/Local/Microsoft/WindowsApps/python3.11.exe c:/Users/Asrock/Desktop/Studia/APU/LAB4/zad4.py
+2024-01-18 20:08:15.718999: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\Asrock\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+x_train Kształt:  (60000, 28, 28, 1)
+Próbki Train:  60000
+Próbki Test:  10000
+WARNING:tensorflow:From C:\Users\Asrock\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING:tensorflow:From C:\Users\Asrock\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\keras\src\layers\pooling\max_pooling2d.py:161: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+2024-01-18 20:08:19.287957: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv2d (Conv2D)             (None, 26, 26, 32)        320
+
+ max_pooling2d (MaxPooling2  (None, 13, 13, 32)        0
+ D)
+
+ conv2d_1 (Conv2D)           (None, 11, 11, 64)        18496
+
+ max_pooling2d_1 (MaxPoolin  (None, 5, 5, 64)          0
+ g2D)
+
+ flatten (Flatten)           (None, 1600)              0
+
+ dropout (Dropout)           (None, 1600)              0
+
+ dense (Dense)               (None, 10)                16010
+
+=================================================================
+Total params: 34826 (136.04 KB)
+Trainable params: 34826 (136.04 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+WARNING:tensorflow:From C:\Users\Asrock\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+Epoch 1/15
+WARNING:tensorflow:From C:\Users\Asrock\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\keras\src\utils\tf_utils.py:492: The name tf.ragged.RaggedTensorValue is deprecated. Please use tf.compat.v1.ragged.RaggedTensorValue instead.
+
+WARNING:tensorflow:From C:\Users\Asrock\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\keras\src\engine\base_layer_utils.py:384: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+422/422 [==============================] - 5s 10ms/step - loss: 0.6884 - accuracy: 0.7543 - val_loss: 0.4486 - val_accuracy: 0.8388
+Epoch 2/15
+422/422 [==============================] - 4s 9ms/step - loss: 0.4466 - accuracy: 0.8382 - val_loss: 0.3792 - val_accuracy: 0.8665
+Epoch 3/15
+422/422 [==============================] - 4s 9ms/step - loss: 0.3998 - accuracy: 0.8579 - val_loss: 0.3649 - val_accuracy: 0.8705
+Epoch 4/15
+422/422 [==============================] - 4s 9ms/step - loss: 0.3690 - accuracy: 0.8684 - val_loss: 0.3266 - val_accuracy: 0.8823
+Epoch 5/15
+422/422 [==============================] - 4s 9ms/step - loss: 0.3497 - accuracy: 0.8739 - val_loss: 0.3119 - val_accuracy: 0.8877
+Epoch 6/15
+422/422 [==============================] - 4s 9ms/step - loss: 0.3326 - accuracy: 0.8801 - val_loss: 0.2983 - val_accuracy: 0.8908
+Epoch 7/15
+422/422 [==============================] - 4s 9ms/step - loss: 0.3186 - accuracy: 0.8848 - val_loss: 0.2905 - val_accuracy: 0.8968
+Epoch 8/15
+422/422 [==============================] - 4s 9ms/step - loss: 0.3086 - accuracy: 0.8895 - val_loss: 0.2816 - val_accuracy: 0.8977
+Epoch 9/15
+422/422 [==============================] - 4s 9ms/step - loss: 0.2991 - accuracy: 0.8923 - val_loss: 0.2713 - val_accuracy: 0.8988
+Epoch 10/15
+422/422 [==============================] - 4s 9ms/step - loss: 0.2915 - accuracy: 0.8947 - val_loss: 0.2706 - val_accuracy: 0.8995
+Epoch 11/15
+422/422 [==============================] - 4s 9ms/step - loss: 0.2822 - accuracy: 0.8991 - val_loss: 0.2677 - val_accuracy: 0.9028
+Epoch 12/15
+422/422 [==============================] - 4s 9ms/step - loss: 0.2788 - accuracy: 0.8980 - val_loss: 0.2621 - val_accuracy: 0.9058
+Epoch 13/15
+422/422 [==============================] - 4s 9ms/step - loss: 0.2764 - accuracy: 0.8989 - val_loss: 0.2696 - val_accuracy: 0.9015
+Epoch 14/15
+422/422 [==============================] - 4s 9ms/step - loss: 0.2700 - accuracy: 0.9018 - val_loss: 0.2535 - val_accuracy: 0.9048
+Epoch 15/15
+422/422 [==============================] - 4s 9ms/step - loss: 0.2661 - accuracy: 0.9030 - val_loss: 0.2465 - val_accuracy: 0.9100
+Test strat:  0.2670741081237793
+Test dokładności
+313/313 [==============================] - 1s 1ms/step
+PS C:\Users\Asrock\Desktop\Studia\APU\LAB4> 
